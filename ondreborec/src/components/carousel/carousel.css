@@ -1,0 +1,53 @@
+/* Upravený a vylepšený kód pro carousel */
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel button {
+    margin: 0 10px;
+    padding: 12px 20px; /* Větší padding pro tlačítka */
+    border: none;
+    border-radius: 25px; /* Kulatější rohy */
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px; /* Zvětšená velikost písma */
+    transition: background-color 0.3s, transform 0.3s; /* Přidaný přechod pro plynulý efekt */
+}
+
+.carousel button:hover {
+    background-color: #0056b3; /* Změna barvy na najetí myší */
+}
+
+.carousel-slide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 20px;
+}
+
+.slide-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.slide-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
+}
+
+.slide-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 500ms, transform 500ms;
+}
